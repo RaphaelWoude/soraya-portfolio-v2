@@ -1,0 +1,39 @@
+.Nav {
+    position: absolute;
+    background-color: transparent;
+    width: 100%;
+    margin-top: 1rem;
+    color: white;
+    padding-bottom: 1rem;
+
+    &__Container {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1440px;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    &__Left {
+        display: flex;
+        justify-content: left;
+        width: 50%;
+        
+    }
+
+    &__Right {
+        display: flex;
+        justify-content: right;
+        width: 50%;
+    }
+
+    &__List {
+        list-style-type: none;
+    }
+
+    &__Item {
+        display: inline-block;
+        margin-left: 2rem;
+        font-size: 32px;
+    }
+}
