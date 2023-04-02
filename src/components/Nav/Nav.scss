@@ -3,7 +3,6 @@
     background-color: transparent;
     width: 100%;
     margin-top: 1rem;
-    color: white;
     padding-bottom: 1rem;
 
     &__Container {
@@ -35,5 +34,14 @@
         display: inline-block;
         margin-left: 2rem;
         font-size: 32px;
+    }
+
+    &__Anchor {
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+            color: darkviolet;
+        }
     }
 }
