@@ -14,7 +14,7 @@ function Banner() {
                     </p>
                     <p className="Banner__Scroll">
                         Scroll voor meer 
-                        <button className="Banner__Button">▼</button>
+                        <a className="Banner__Button" href="#skills">▼</a>
                     </p>
                 </div>
                 <div className="Banner__Right">

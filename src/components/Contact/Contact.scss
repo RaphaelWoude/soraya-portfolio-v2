@@ -3,13 +3,24 @@
     color: white;
 
     &__Container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        max-width: 1440px;
-        height: 100%;
-        margin: 0 auto;
+        padding: 2rem;
+
+        @media only screen and (min-width: 1024px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        @media only screen and (min-width: 1440px) {
+            max-width: 1024px;
+        }
+
+        @media only screen and (min-width: 1920px) {
+            max-width: 1440px;
+        }
     }
 
     &__Left {
