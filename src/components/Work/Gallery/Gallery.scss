@@ -1,0 +1,53 @@
+.Gallery {
+    position: relative;
+    width: 100%;
+
+    &__Counter {
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        width: 100%;
+        color: black;
+        padding: 1rem;
+        font-size: 32px;
+    }
+
+    &__Entry {
+        display: flex;
+    }
+
+    &__Image {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__Actions {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 95%;
+        font-size: 32px;
+        display: flex;
+        color: black;
+        justify-content: center;
+        padding-bottom: 1rem;
+    }
+
+    &__Prev {
+        display: flex;
+        justify-content: left;
+        margin-left: .75rem;
+    }
+
+    &__Next {
+        display: flex;
+        justify-content: right;
+        margin-right: .75rem;
+    }
+
+    &__Prev, &__Next {
+        width: 50%;
+        cursor: pointer;
+    }
+}

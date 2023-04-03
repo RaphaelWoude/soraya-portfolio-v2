@@ -24,13 +24,21 @@
     }
 
     &__Left {
-        width: 50%;
+        width: 100%;
+
+        @media only screen and (min-width: 1024px) {
+            width: 50%;
+        }
     }
 
     &__Title {
         margin-top: 2rem;
         margin-bottom: 2rem;
-        font-size: 64px;
+        font-size: 32px;
+        
+        @media only screen and (min-width: 1024px) {
+            font-size: 64px;
+        }
     }
 
     &__Description {
@@ -38,6 +46,10 @@
     }
 
     &__Right {
-        width: 50%;
+        width: 100%;
+
+        @media only screen and (min-width: 1024px) {
+            width: 50%;
+        }
     }
 }
