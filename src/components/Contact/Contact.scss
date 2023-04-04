@@ -1,5 +1,5 @@
 .Contact {
-    background-color: rgb(124, 124, 124);
+    background: black;
     color: white;
 
     &__Container {
@@ -50,6 +50,38 @@
 
         @media only screen and (min-width: 1024px) {
             width: 50%;
+        }
+    }
+
+    &__Row {
+        display: flex;
+        flex-wrap: wrap;
+
+        &--Center {
+            justify-content: center;
+        }
+    }
+
+    &__Item {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__Image {
+        width: 96px;
+
+        @media only screen and (min-width: 1024px) {
+            width: 128px;
+        }
+
+        &--Small {
+            width: 72px;
+
+            @media only screen and (min-width: 1024px) {
+                width: 96px;
+            }
         }
     }
 }

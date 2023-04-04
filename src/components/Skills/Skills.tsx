@@ -16,7 +16,9 @@ function Skills() {
                     <h1 className="Skills__Title" id="skills">Vaardigheden</h1>
                     <p className="Skills__Description">
                         Mijn ervaringen in Adobe software is zeer uitgebreid, zeker in de software Adobe Indesign, Illustrator, Photoshop en After Effects. 
-                        Op het moment ben ik mijn kennis verder aan het uitbreiden op school, met het keuzedeel 3d Artwork. Daarbij gebruik ik de software Maya, Substance Painter en Unity. 
+                        Op het moment ben ik mijn kennis verder aan het uitbreiden op school, met het keuzedeel 3d Artwork. Daarbij gebruik ik de software Maya, 
+                        Substance Painter en Unity. <br/> <br/>
+                        In mijn vrije tijd gebruik ik ook graag Procreate op mijn iPad, en natuurlijk het potlood en papier.
                     </p>
                 </div>
                 <div className="Skills__Right">

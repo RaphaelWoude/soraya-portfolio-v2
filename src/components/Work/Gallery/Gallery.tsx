@@ -2,12 +2,16 @@ import './Gallery.scss'
 
 import { useState } from 'react';
 
-interface GalleryItem {
+interface GalleryProps {
+    list: GalleryItem[];
+}
+
+export interface GalleryItem {
     logo: string;
 }
 
-function Gallery() {
-    const [entries, setEntries] = useState<GalleryItem[]>([{ logo: 'assets/gallery1.png' }, { logo: 'assets/gallery2.png' }, { logo: 'assets/gallery3.png' }, { logo: 'assets/gallery4.png' }]);
+function Gallery({ list }: GalleryProps) {
+    const [entries, setEntries] = useState<GalleryItem[]>(list);
     const [selected, setSelected] = useState<number>(0);
 
     function prev() {
@@ -23,12 +27,7 @@ function Gallery() {
         }
         setSelected(selected + 1)
     }
-
-    function getMaxLength() {
-        return entries.length;
-    }
     
-
     function getSelectedEntry() // Slow
     {
         return entries.at(selected);
@@ -36,9 +35,6 @@ function Gallery() {
 
     return (
         <div className="Gallery">
-            <div className="Gallery__Counter">
-                { selected + 1 } / { getMaxLength() } 
-            </div>   
             <div className="Gallery__Entry">
                 <img className="Gallery__Image" src={getSelectedEntry()?.logo} alt="" />
             </div>
