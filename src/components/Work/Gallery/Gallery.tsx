@@ -11,6 +11,11 @@ export interface GalleryItem {
     logo: string;
     title: string;
     description: string;
+    extraImage: ExtraImage[];
+}
+
+export interface ExtraImage {
+    link: string;
 }
 
 function Gallery({ list }: GalleryProps) {
