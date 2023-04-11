@@ -1,6 +1,7 @@
+import { Modal } from '../../Modal/Modal';
 import './Gallery.scss'
 
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 interface GalleryProps {
     list: GalleryItem[];
@@ -8,45 +9,55 @@ interface GalleryProps {
 
 export interface GalleryItem {
     logo: string;
+    title: string;
+    description: string;
 }
 
 function Gallery({ list }: GalleryProps) {
     const [entries, setEntries] = useState<GalleryItem[]>(list);
+    const [selectedEntry, setSelectedEntry] = useState<GalleryItem>();
     const [selected, setSelected] = useState<number>(0);
+    const [open, setOpen] = useState<boolean>(false);
+
+    useEffect(() => {
+        setSelectedEntry(entries.at(0));
+    }, [])
 
     function prev() {
-        if (selected == 0) {
-            return;
-        }
-        setSelected(selected - 1)
+        if (selected == 0) return;
+        const select = selected - 1;
+        setSelected(select);
+        setSelectedEntry(entries.at(select));
     }
 
     function next() {
-        if (selected == entries.length - 1) {
-            return;
-        }
-        setSelected(selected + 1)
-    }
-    
-    function getSelectedEntry() // Slow
-    {
-        return entries.at(selected);
+        if (selected == entries.length - 1) return;
+        const select = selected + 1;
+        setSelected(select);
+        setSelectedEntry(entries.at(select));
     }
 
     return (
         <div className="Gallery">
             <div className="Gallery__Entry">
-                <img className="Gallery__Image" src={getSelectedEntry()?.logo} alt="" />
+                <img className="Gallery__Image" onClick={() => setOpen(true)} src={selectedEntry?.logo} alt="" />
             </div>
 
-            <div className="Gallery__Actions">
-                <div className="Gallery__Prev">
-                    <a onClick={() => prev()}>❮</a>
-                </div>
-                <div className="Gallery__Next">
-                    <a onClick={() => next()}>❯</a>
-                </div>
+            <div className="Gallery__Prev">
+                <a className="Gallery__Anchor" onClick={() => prev()}>❮</a>
             </div>
+            <div className="Gallery__Next">
+                <a className="Gallery__Anchor" onClick={() => next()}>❯</a>
+            </div>
+
+            <Modal open={open} logo={selectedEntry?.logo!} onClose={() => setOpen(false)}>
+                <>
+                    <h1>{selectedEntry?.title} </h1>
+                    <p>
+                        {selectedEntry?.description}
+                    </p>
+                </>
+            </Modal>
         </div>
     )
 }

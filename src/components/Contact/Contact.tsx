@@ -16,12 +16,12 @@ function Contact() {
                 <div className="Contact__Right">
                     <div className="Contact__Row">
                         <div className="Contact__Item">
-                            <a href="">
+                            <a href="https://nl.linkedin.com/in/soraya-van-der-woude-555b75263">
                                 <img className="Contact__Image Contact__Image--Small" src={LinkedIn} alt="" />
                             </a>
                         </div>
                         <div className="Contact__Item">
-                            <a href="">
+                            <a href="mailto:Soraya.vd.Woude@gmail.com">
                                 <img className="Contact__Image" src={Email} alt="" />
                             </a>
                         </div>
