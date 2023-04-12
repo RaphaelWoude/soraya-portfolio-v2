@@ -1,24 +1,21 @@
 import { Modal } from '../../Modal/Modal';
 import './Gallery.scss'
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 interface GalleryProps {
     list: GalleryItem[];
+    clickable?: boolean;
 }
 
 export interface GalleryItem {
     logo: string;
-    title: string;
-    description: string;
-    extraImage: ExtraImage[];
+    title?: string;
+    description?: string;
+    extraImages?: GalleryItem[];
 }
 
-export interface ExtraImage {
-    link: string;
-}
-
-function Gallery({ list }: GalleryProps) {
+function Gallery({ list, clickable = true }: GalleryProps) {
     const [entries, setEntries] = useState<GalleryItem[]>(list);
     const [selectedEntry, setSelectedEntry] = useState<GalleryItem>();
     const [selected, setSelected] = useState<number>(0);
@@ -42,10 +39,15 @@ function Gallery({ list }: GalleryProps) {
         setSelectedEntry(entries.at(select));
     }
 
+    function setOpenState(state: boolean) {
+        if (!clickable) return;
+        setOpen(state);
+    }
+
     return (
         <div className="Gallery">
             <div className="Gallery__Entry">
-                <img className="Gallery__Image" onClick={() => setOpen(true)} src={selectedEntry?.logo} alt="" />
+                <img className="Gallery__Image" onClick={() => setOpenState(true)} src={selectedEntry?.logo} alt="" />
             </div>
 
             <div className="Gallery__Prev">
@@ -55,14 +57,16 @@ function Gallery({ list }: GalleryProps) {
                 <a className="Gallery__Anchor" onClick={() => next()}>❯</a>
             </div>
 
-            <Modal open={open} logo={selectedEntry?.logo!} onClose={() => setOpen(false)}>
-                <>
-                    <h1>{selectedEntry?.title} </h1>
-                    <p>
-                        {selectedEntry?.description}
-                    </p>
-                </>
-            </Modal>
+            { clickable && (
+                <Modal open={open} logo={selectedEntry?.logo!} extraImages={selectedEntry?.extraImages!} onClose={() => setOpenState(false)}>
+                    <>
+                        <h1>{selectedEntry?.title} </h1>
+                        <p>
+                            {selectedEntry?.description}
+                        </p>
+                    </>
+                </Modal>
+            )}
         </div>
     )
 }

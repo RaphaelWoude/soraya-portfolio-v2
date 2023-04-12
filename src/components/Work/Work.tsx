@@ -7,22 +7,24 @@ function Work() {
         { logo: 'assets/gallery2.png', title: "Wikkelvouw bronchure Portfolio", description: "Voor het vak Print heb ik een wikkelvouw bronchure gemaakt, om het in het productie huis het zelf uit te printen en het zelf uit te snijden. Voor extra skills in de machines. \n\nProgramma's die ik heb gebruikt: Adobe Indesign en Procreate." },
         { logo: 'assets/gallery3.png', title: "Visite kaartje", description: "Voor mijn toekomstige bedrijf heb ik een visite kaartje gemaakt. met als doel mijn eigen kaartje \n\nProgramma's die ik heb gebruikt: Adobe Indesign en Procreate" },
         { logo: 'assets/gallery4.png', title: "Pop art poster", description: "In het vak software moest ik een bepaald soort artwork maken genaamd 'Pop art' Daarbij vond ik het erg leuk om mezelf daarin te verwerken in het zwart wit \n\nProgramma die ik heb gebruikt: Procreate" },
-        { logo: 'assets/gallery6.png', title: "Magazine Catalogus", description: "Voor het vak Beeldvorming moet ik een magazine maken met als thema 'Catalogus'een Catalogus houd simpel weg in een boek/magazine met een aantal kunstenaars met hun tentoongestelde werk \n\nProgramma's die ik heb gebruikt: Adobe Indesign en Adobe photoshop" },
+        { logo: 'assets/gallery6.png', title: "Magazine Catalogus", description: "Voor het vak Beeldvorming moet ik een magazine maken met als thema 'Catalogus'een Catalogus houd simpel weg in een boek/magazine met een aantal kunstenaars met hun tentoongestelde werk \n\nProgramma's die ik heb gebruikt: Adobe Indesign en Adobe photoshop", extraImages: [{ logo: 'assets/gallery6.png' }, { logo: 'assets/inleiding.png' }, { logo: 'assets/bladzijde2.png' }, { logo: 'assets/bladzijde3.png' }, { logo: 'assets/bladzijde4.png' }, { logo: 'assets/bladzijde5.png' }, { logo: 'assets/bladzijde6.png' }, { logo: 'assets/bladzijde7.png' }, { logo: 'assets/bladzijde8.png' }, { logo: 'assets/bladzijde9.png' }] },
         { logo: 'assets/gallery7.png', title: "Record", description: "" }
     ];
 
     const items2: GalleryItem[] = [
-        { logo: 'assets/illustraties1.png', title: "League of Legends: Caitlin, Jinx en Vi ", description: "" },
-        { logo: 'assets/illustraties2.png', title: "Kittycat", description: "Mijn vliegende Kittycat eiland" },
+        { logo: 'assets/illustraties1.png', title: "League of Legends: Caitlyn, Jinx en Vi", description: "", extraImages: [{ logo: 'assets/illustraties1.png' }, { logo: 'assets/arcane2.png'}, { logo: 'assets/arcane3.png'}] },
+        { logo: 'assets/illustraties2.png', title: "Kittycat", description: "Mijn vliegende Kittycat eiland", extraImages: [{ logo: 'assets/illustraties2.png' }, { logo: 'assets/kittycat2.png'}, { logo: 'assets/kittycat3.jpg'}] },
         { logo: 'assets/illustraties3.jpg', title: "Realitische dot Illustratie", description: "" },
         { logo: 'assets/illustraties4.jpg', title: "Mushroom Woman", description: "" },
         { logo: 'assets/illustraties5.png', title: "Character Design Chloe", description: "" },
         { logo: 'assets/illustraties6.png', title: "Character Design Luca", description: "" },
-        { logo: 'assets/illustraties7.png', title: "GLR Winter Editie insta post", description: "" },
-        { logo: 'assets/illustraties8.jpg', title: "Gekleurde League of Legends Lulu", description: "" },
-        { logo: 'assets/illustraties9.jpg', title: "Fineline", description: "" },
-        { logo: 'assets/illustraties10.jpg', title: "Realistische vogel", description: "" },
-        { logo: 'assets/illustraties11.jpg', title: "Butterfly head", description: "" },
+        { logo: 'assets/illustraties7.png', title: "Character Design Soraya", description: "" },
+        { logo: 'assets/illustraties8.png', title: "Stickers", description: "" },
+        { logo: 'assets/illustraties9.png', title: "GLR Winter Editie insta post", description: "", extraImages: [{ logo: 'assets/illustraties9.png' }, { logo: 'assets/vlinder2.png'}] },
+        { logo: 'assets/illustraties10.jpg', title: "Gekleurde League of Legends Lulu", description: "" },
+        { logo: 'assets/illustraties11.jpg', title: "Fineline", description: "" },
+        { logo: 'assets/illustraties12.jpg', title: "Realistische vogel", description: "" },
+        { logo: 'assets/illustraties13.jpg', title: "Butterfly head", description: "" },
     ];
         
     return (
