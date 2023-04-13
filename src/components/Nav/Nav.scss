@@ -18,7 +18,7 @@
             margin: 0 auto;
         }
 
-        @media only screen and (min-width: 1440px) {
+        @media only screen and (min-width: 1440x) {
             max-width: 1024px;
         }
 
@@ -33,14 +33,14 @@
         @media only screen and (min-width: 1024px) {
             display: flex;
             justify-content: left;
-            width: 50%;
+            width: 25%;
         }
     }
 
     &__Right {
         display: flex;
         justify-content: right;
-        width: 50%;
+        width: 75%;
     }
 
     &__List {
